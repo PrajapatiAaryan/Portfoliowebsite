@@ -1,5 +1,4 @@
 import React from "react";
-import { Boxes } from "../components/ui/background-boxes";
 
 const Skillspage = () => {
   const skils = [

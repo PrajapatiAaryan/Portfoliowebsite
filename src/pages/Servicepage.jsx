@@ -46,10 +46,11 @@ const Servicepage = () => {
           {services.map((item, idx) => (
             <div
               key={idx}
-              className="group flash-border-on-hover text-white flex justify-center items-center border border-gray-600 bg-gray-800 flex-col py-3 md:py-8 gap-4 transition-all duration-200 rounded-md hover:bg-gray-900"
+              className="group flash-border-on-hover text-white flex justify-center items-center bg-gray-800 flex-col py-3 md:py-8 gap-4 transition-all duration-800 rounded-md card-gradient-hover z-10 "
+              
             >
-              <div className="p-2 rounded-full w-fit transition-all duration-1000 group-hover:bg-cyan-500">
-                <div className="bg-white p-2 rounded-full w-fit">
+              <div className="p-2 rounded-full w-fit transition-all duration-1000 group-hover:bg-cyan-500 z-10">
+                <div className="bg-white p-2 rounded-full w-fit z-10">
                   <img
                     src={item.imgsrc}
                     alt="html"
@@ -58,13 +59,15 @@ const Servicepage = () => {
                   
                 </div>
               </div>
-              <h1 className="text-white font-bold text-2xl text-center">{item.name}</h1>
-              <p className="text-xl text-gray-500 text-center md:px-16 px-3">
+              <h1 className="text-white font-bold text-2xl text-center z-10">{item.name}</h1>
+              <p className="text-xl text-gray-500 text-center md:px-16 px-3 z-10">
                 {item.para}
               </p>
             </div>
           ))}
+
         </div>
+      
       </div>
     </>
   );

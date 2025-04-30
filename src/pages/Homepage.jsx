@@ -13,7 +13,7 @@ const Homepage = () => {
             <h1 className="text-2xl sm:text-3xl md:text-4xl text-cyan-500 font-semibold">
               A Software Developer
             </h1>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-semibold">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-semibold ">
               Prajapati Aryan
             </h1>
             <p className="text-base sm:text-lg md:text-2xl text-gray-500">
@@ -23,12 +23,16 @@ const Homepage = () => {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start">
-              <button className="w-full sm:w-auto flex justify-center items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 shadow-lg shadow-blue-400 rounded-md text-lg sm:text-xl font-semibold hover:-translate-y-1 transition-all duration-500">
-                View My Work
-              </button>
-              <button className="w-full sm:w-auto flex justify-center items-center px-8 py-4 border border-cyan-500 text-cyan-500 text-lg sm:text-xl font-semibold rounded-md hover:-translate-y-1 transition-all duration-300 hover:bg-cyan-500 hover:text-white">
-                Contact Me
-              </button>
+              <a href="#projects">
+                <button className="w-full sm:w-auto flex justify-center items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 shadow-md shadow-blue-400 rounded-md text-lg sm:text-xl font-semibold hover:-translate-y-1 transition-all duration-500">
+                  View My Work
+                </button>
+              </a>
+              <a href="#contact">
+                <button className="w-full sm:w-auto flex justify-center items-center px-8 py-4 border border-cyan-500 text-cyan-500 text-lg sm:text-xl font-semibold rounded-md hover:-translate-y-1 transition-all duration-300 hover:bg-cyan-500 hover:text-white">
+                  Contact Me
+                </button>
+              </a>
             </div>
 
             {/* Social Icons */}

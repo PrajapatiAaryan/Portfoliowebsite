@@ -1,6 +1,14 @@
 import React from "react";
 
 const Aboutpage = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/cv.pdf"; // path to the file in public folder
+    link.download = "cv.pdf"; // downloaded file name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <>
       <div className="min-h-screen bg-gray-950 w-full pt-20">
@@ -65,7 +73,10 @@ const Aboutpage = () => {
                 </div>
               </div>
               <div className="px-4 py-2">
-                <button className="flex justify-center px-4 py-3 border border-cyan-400 rounded-xl bg-gradient-to-r from-blue-700 to-cyan-700 text-white text-xl  cursor-pointer hover:scale-110 shadow-lg shadow-blue-500 transition-all duration-500">
+                <button
+                  onClick={handleDownload}
+                  className="flex justify-center px-4 py-3 border border-cyan-400 rounded-xl bg-gradient-to-r from-blue-700 to-cyan-700 text-white text-xl  cursor-pointer hover:scale-110 shadow-lg shadow-blue-500 transition-all duration-500"
+                >
                   Download CV
                 </button>
               </div>
@@ -78,3 +89,6 @@ const Aboutpage = () => {
 };
 
 export default Aboutpage;
+
+
+
