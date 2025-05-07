@@ -46,10 +46,12 @@ const Projectpage = () => {
     },
     
   ];
+  const categories = ["All", "HTML, CSS, JS", "React + Tailwind", "Node.js"];
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [filter, setfilter] = useState("All")
   const filterprojects = filter == "All"?projectsData : projectsData.filter((item)=>item.technology=== filter)
   const filterprojectfunction = (filter)=>{
-    console.log(filter)
+    setSelectedCategory(filter);
     setfilter(filter)
   }
   
@@ -65,12 +67,22 @@ const Projectpage = () => {
         </div>
       </div>
       <div className="flex justify-center items-center pb-8">
-        <ul className="flex items-center gap-4 flex-wrap justify-center">
-          {["All","HTML, CSS, JS" ,"React + Tailwind", "Node.js"].map((item,idx)=>
-          <li key={idx} className="flex justify-center items-center bg-gradient-to-r from-cyan-500 to-blue-400 text-black font-semibold text-xl cursor-pointer w-fit p-3 rounded-2xl" onClick={()=>filterprojectfunction(item)}>{item}</li>
-          )}
-        </ul>
-      </div>
+      <ul className="flex items-center gap-4 flex-wrap justify-center">
+        {categories.map((item, idx) => (
+          <li
+            key={idx}
+            onClick={() => filterprojectfunction(item)}
+            className={`flex justify-center items-center font-semibold text-xl cursor-pointer w-fit p-3 rounded-2xl transition-all duration-500 ${
+              selectedCategory === item
+                ? "bg-gradient-to-r from-cyan-500 to-blue-400 text-black transition-all duration-500"
+                : "bg-transparent border border-gray-400 text-gray-500 transition-all duration-500"
+            }`}
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
 
       <div className="xl:px-32 w-full flex justify-center items-center">
         {/* laptop view */}
