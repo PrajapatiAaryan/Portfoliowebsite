@@ -73,7 +73,8 @@ const Projectpage = () => {
       </div>
 
       <div className="xl:px-32 w-full flex justify-center items-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-8">
+        {/* laptop view */}
+        <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-8">
           {filterprojects.map((item, idx) => (
             <div
               key={idx}
@@ -99,8 +100,35 @@ const Projectpage = () => {
                 </a>
               </div>
             </div>
-          ))}
-         
+          ))}    
+        </div>
+        {/* mobiel / tablet view */}
+        <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-8 " >
+          {filterprojects.map((item, idx) => (
+            <div
+              key={idx}
+              className="flex flex-col p-2 rounded-xl shadow-sm shadow-cyan-300  border border-cyan-200  h-full w-full"
+             border>
+              <img
+                src={item.imgsrc}
+                alt="project img"
+                className="h-full w-full object-contain rounded-xl"
+                
+              />
+              <div className=" text-white flex flex-col justify-center items-center p-4 text-center">
+                <h2 className="text-xl font-bold mb-2">{item.name}</h2>
+                <p className="text-sm mb-4">{item.detail}</p>
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-cyan-500 text-white rounded hover:bg-cyan-600 transition"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          ))}    
         </div>
       </div>
     </div>
