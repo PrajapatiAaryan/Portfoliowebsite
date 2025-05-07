@@ -77,9 +77,9 @@ const Educationpage = () => {
           {/* Vertical Line visible on all screens */}
           <div className="absolute left-5 top-20 bottom-0 w-0.5 bg-cyan-500 z-0"></div>
 
-          <div className="space-y-10 relative">
+          <div className="space-y-10 relative ">
             {educationData.map((edu, index) => (
-              <div key={index} className="relative pl-10">
+              <div key={index} className="relative pl-10 ">
                 <div className="absolute left-3 top-2 h-5 w-5 bg-cyan-500 rounded-full border-2 border-gray-900 z-10"></div>
                 <div className="bg-gray-900 p-6 rounded-xl shadow-md hover:-translate-y-2 transition-all duration-300">
                   <span className="text-cyan-500 bg-gray-800 px-4 py-1 inline-block mb-4">
