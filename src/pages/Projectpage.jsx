@@ -83,6 +83,7 @@ const Projectpage = () => {
                 src={item.imgsrc}
                 alt="project img"
                 className="h-full w-full object-cover rounded-xl"
+                onClick={()=>window.location.href=`${item.link}`}
               />
               {/* Overlay */}
               <div className="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-center">
@@ -99,37 +100,7 @@ const Projectpage = () => {
               </div>
             </div>
           ))}
-          {/* {project.map((item, idx) => (
-            <TiltedCard
-              key={idx}
-              imageSrc={item.imgsrc}
-              altText={item.name}
-              captionText={item.name}
-              containerHeight="300px"
-              containerWidth="100%"
-              imageHeight="100%"
-              imageWidth="100%"
-              rotateAmplitude={12}
-              scaleOnHover={1.05}
-              showMobileWarning={false}
-              showTooltip={false}
-              displayOverlayContent={true}
-              overlayContent={
-                <div className="text-white flex flex-col justify-center items-center gap-2 text-center p-4">
-                  <h2 className="text-xl font-bold">{item.name}</h2>
-                  <p className="text-sm">{item.detail}</p>
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-2 px-4 py-2 bg-cyan-500 text-white rounded hover:bg-cyan-600 transition"
-                  >
-                    View Project
-                  </a>
-                </div>
-              }
-            />
-          ))} */}
+         
         </div>
       </div>
     </div>
