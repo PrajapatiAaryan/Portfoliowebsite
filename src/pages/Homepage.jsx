@@ -7,7 +7,7 @@ import LetterGlitch from "../components/LetterGlitch";
 const Homepage = () => {
   return (
     <>
-      <div className="min-h-screen  bg-gray-950 text-white px-5 sm:px-10 md:px-16 lg:px-10 xl:px-48 pt-32 lg:pt-24 z-10">
+      <div className="min-h-screen  bg-gray-950 text-white px-5 sm:px-10 md:px-16 lg:px-10 xl:px-44 pt-32 lg:pt-24 z-10">
         <div className="flex flex-col-reverse lg:flex-row justify-center items-center w-full gap-10 md:gap-5 h-auto lg:h-[80vh] ">
           {/* Left Content */}
           <div className="flex flex-col gap-8 w-full lg:w-[50%] text-center lg:text-left xl:pl-16">
