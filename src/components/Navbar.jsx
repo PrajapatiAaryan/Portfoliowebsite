@@ -18,15 +18,17 @@ const Navbar = () => {
 
   return (
     <div className="fixed w-full z-50 bg-gray-950 text-white">
-      <nav className="flex justify-between lg:justify-around  items-center  sm:px-10 md:px-16 py-5 w-full px-3" >
+      <nav className="flex justify-between   items-center  sm:px-10 xl:px-20 py-5 w-full px-3" >
         {/* Logo */}
+        <a href="#home " className="cursor-pointer" >
         <div className="text-3xl sm:text-4xl font-bold">
           Prajapati
           <span className="text-cyan-500 font-semibold">Aryan</span>
         </div>
+        </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-8 text-lg text-gray-400 font-bold">
+        <ul className="hidden lg:flex gap-8 text-lg text-gray-400 font-bold">
           {navLinks.map((link, index) => (
             <li key={index} className="group hover:text-white cursor-pointer flex flex-col">
               <a href={link.href} className="relative pb-2">
@@ -40,14 +42,14 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Hamburger Icon */}
-        <div className="md:hidden text-2xl cursor-pointer" onClick={toggleMenu}>
+        <div className="lg:hidden text-2xl cursor-pointer" onClick={toggleMenu}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
       </nav>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <ul className="md:hidden flex flex-col items-center bg-gray-900 text-white text-lg font-semibold gap-6 py-6">
+        <ul className="lg:hidden flex flex-col items-center bg-gray-900 text-white text-lg font-semibold gap-6 py-6">
           {navLinks.map((link, index) => (
             <li key={index} onClick={closeMenu} className="hover:text-cyan-400">
               <a href={link.href}>{link.name}</a>

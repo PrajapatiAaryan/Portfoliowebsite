@@ -29,7 +29,7 @@ const Skillspage = () => {
             <h1 className="text-center w-20 bg-cyan-500 h-1 "></h1>
           </div>
         </div>
-        <div className="md:px-32">
+        <div className="xl:px-32">
           <div className="px-8">
             <h1 className="text-3xl font-bold text-white">
               Design & Development Tools

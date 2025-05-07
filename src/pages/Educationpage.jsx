@@ -55,7 +55,7 @@ const experienceData = [
 
 const Educationpage = () => {
   return (
-    <div className="min-h-screen bg-gray-950 pt-20 px-4 sm:px-8 md:px-20 text-white">
+    <div className="min-h-screen bg-gray-950 pt-20 px-4 sm:px-8 xl:px-20 text-white">
       <div className="text-center mb-10 md:py-20">
         <h2 className="text-xl font-bold text-cyan-500">My Journey</h2>
         <h1 className="text-4xl md:text-5xl font-bold text-white mt-2">
@@ -64,7 +64,7 @@ const Educationpage = () => {
         <div className="h-1 w-20 bg-cyan-500 mx-auto mt-4"></div>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-10 lg:px-32">
+      <div className="flex flex-col md:flex-row gap-10  xl:px-32">
         {/* Education */}
         <div className="md:w-1/2 relative">
           <div className="flex items-center gap-4 mb-6">

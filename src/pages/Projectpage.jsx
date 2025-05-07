@@ -1,57 +1,62 @@
-import React from "react";
-
+import React, { useState } from "react";
+import TiltedCard from "../components/TiltedCard";
 const Projectpage = () => {
-  const project = [
+  const projectsData = [
     {
-      name: "Find House Website",
-      detail:
-        "This website is built with React + Vite and Tailwind CSS. It is fully responsive and includes working carousels.",
+      name: "Real Estate Website UI",
+      detail: "A sleek and responsive real estate website UI built with React and Tailwind CSS, featuring property listings, filters, and a modern layout for an engaging user experience.",
       imgsrc: "/project1.png",
-      link: "https://your-live-project-link-or-video.com",
+      link: "https://findhouse-indol.vercel.app/",
+      technology: "React + Tailwind",
     },
     {
-      name: "Portfolio Website",
-      detail:
-        "A modern personal portfolio built using React and Tailwind, showcasing my projects and contact form.",
+      name: "Expense Tracker Web App",
+      detail: "A modern and responsive expense tracking application built with React and Tailwind CSS. Users can add, edit, and delete transactions, and visualize their spending through interactive bar and pie charts. Includes a clean UI, dark/light theme toggle, and localStorage for data persistence without a backend.",
       imgsrc: "/project2.png",
-      link: "https://your-live-project-link-or-video.com",
+      link: "https://expensetracker-liard-ten.vercel.app/",
+      technology: "React + Tailwind",
     },
     {
-      name: "E-Commerce Site",
-      detail:
-        "An e-commerce UI with cart functionality, product filters, and responsive design using React.",
+      name: "Landing Page Website",
+      detail: "A visually appealing and responsive landing page built with HTML, CSS, and JavaScript, showcasing clean design and smooth user interface transitions.",
       imgsrc: "/project3.png",
-      link: "https://your-live-project-link-or-video.com",
+      link: "https://octanet-augest-task1.vercel.app/",
+      technology: "React + Tailwind",
     },
     {
-      name: "Blog Platform",
-      detail:
-        "Simple blog platform frontend built using React and Markdown rendering.",
+      name: "To-Do List App",
+      detail: "A simple and efficient to-do list web app using HTML, CSS, and JavaScript, allowing users to add, complete, and delete tasks with a clean user interface.",
       imgsrc: "/project4.png",
-      link: "https://your-live-project-link-or-video.com",
+      link: "https://octanet-august-task2.vercel.app/",
+      technology: "React + Tailwind",
     },
     {
-      name: "Task Manager App",
-      detail:
-        "Task manager with drag-and-drop features and persistent data using localStorage.",
+      name: "Ecommart eCommerce Website",
+      detail: `A fully functional eCommerce website built with the MERN stack, featuring product listings, cart management, and a smooth shopping experience. ${"https://ecommart-six.vercel.app/"}`,
       imgsrc: "/project5.png",
-      link: "https://your-live-project-link-or-video.com",
+      link: "https://drive.google.com/file/d/13R_9nuJhFS7KYivSd1tI1WvQ52m3K0jS/view?usp=sharing",
+      technology: "Node.js",
     },
     {
-      name: "Weather App",
-      detail:
-        "Weather forecast app fetching data from an API and styled with Tailwind.",
+      name: "Personal Portfolio Website",
+      detail: "A responsive portfolio website showcasing projects, skills, and services, built with React and Tailwind CSS to highlight web development expertise and personal branding.",
       imgsrc: "/project8.png",
       link: "https://your-live-project-link-or-video.com",
+      technology: "HTML, CSS, JS",
     },
+    
   ];
-
+  const [filter, setfilter] = useState("All")
+  const filterprojects = filter == "All"?projectsData : projectsData.filter((item)=>item.technology=== filter)
+  const filterprojectfunction = (filter)=>{
+    console.log(filter)
+    setfilter(filter)
+  }
+  
   return (
     <div className="min-h-screen bg-gray-950 pt-20 h-full py-10">
-      <div className="py-5 md:pb-20">
-        <h1 className="text-center text-xl font-bold text-cyan-500">
-          My Work
-        </h1>
+      <div className="py-5 md:pb-12">
+        <h1 className="text-center text-xl font-bold text-cyan-500">My Work</h1>
         <h1 className="text-center text-5xl text-white font-bold py-4">
           Featured Projects
         </h1>
@@ -59,10 +64,17 @@ const Projectpage = () => {
           <h1 className="text-center w-20 bg-cyan-500 h-1"></h1>
         </div>
       </div>
+      <div className="flex justify-center items-center pb-8">
+        <ul className="flex items-center gap-4 flex-wrap justify-center">
+          {["All","HTML, CSS, JS" ,"React + Tailwind", "Node.js"].map((item,idx)=>
+          <li key={idx} className="flex justify-center items-center bg-gradient-to-r from-cyan-500 to-blue-400 text-black font-semibold text-xl cursor-pointer w-fit p-3 rounded-2xl" onClick={()=>filterprojectfunction(item)}>{item}</li>
+          )}
+        </ul>
+      </div>
 
-      <div className="md:px-32 w-full flex justify-center items-center">
+      <div className="xl:px-32 w-full flex justify-center items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-8">
-          {project.map((item, idx) => (
+          {filterprojects.map((item, idx) => (
             <div
               key={idx}
               className="relative group rounded-xl overflow-hidden shadow-sm shadow-cyan-300 hover:scale-105 transition-all duration-300"
@@ -87,6 +99,37 @@ const Projectpage = () => {
               </div>
             </div>
           ))}
+          {/* {project.map((item, idx) => (
+            <TiltedCard
+              key={idx}
+              imageSrc={item.imgsrc}
+              altText={item.name}
+              captionText={item.name}
+              containerHeight="300px"
+              containerWidth="100%"
+              imageHeight="100%"
+              imageWidth="100%"
+              rotateAmplitude={12}
+              scaleOnHover={1.05}
+              showMobileWarning={false}
+              showTooltip={false}
+              displayOverlayContent={true}
+              overlayContent={
+                <div className="text-white flex flex-col justify-center items-center gap-2 text-center p-4">
+                  <h2 className="text-xl font-bold">{item.name}</h2>
+                  <p className="text-sm">{item.detail}</p>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 px-4 py-2 bg-cyan-500 text-white rounded hover:bg-cyan-600 transition"
+                  >
+                    View Project
+                  </a>
+                </div>
+              }
+            />
+          ))} */}
         </div>
       </div>
     </div>
@@ -94,4 +137,3 @@ const Projectpage = () => {
 };
 
 export default Projectpage;
-

@@ -5,29 +5,35 @@ const Servicepage = () => {
     {
       name: "Full Stack Web Development",
       imgsrc: "/web1.svg",
-      para: "Developing complete web applications using MongoDB, Express, React, and Node.js — including both admin and user panels.",
+      para: "Building complete web applications using the MERN stack (MongoDB, Express, React, Node.js) with structured backend APIs and dynamic frontend logic.",
     },
     {
-      name: "Frontend Development ",
+      name: "Frontend Development",
       imgsrc: "/web2.svg",
-      para: "Building fast and interactive UI with React.js, including state management, component architecture, and dynamic frontend logic.",
+      para: "Creating responsive and interactive UIs using React.js, Tailwind CSS, and JavaScript with strong focus on performance and user experience.",
     },
     {
       name: "Responsive Website Design",
       imgsrc: "/responsive.svg",
-      para: "Crafting modern and mobile-friendly websites using HTML, CSS, Tailwind CSS, and JavaScript to ensure seamless user experience on all devices.",
+      para: "Designing mobile-first, cross-device compatible websites using modern HTML, CSS, Tailwind CSS, and media queries.",
     },
     {
       name: "Landing & Portfolio Websites",
       imgsrc: "/landing.svg",
-      para: "Creating eye-catching and optimized landing pages or portfolio websites that highlight personal branding or business services.",
+      para: "Developing professional portfolio and landing pages to showcase personal or business branding with optimized design and SEO.",
     },
     {
       name: "Dashboard & Admin Panels",
       imgsrc: "/dashboard.svg",
-      para: "Developing interactive dashboards with chart integration, filters, dark/light mode toggles, and fully customizable components.",
+      para: "Creating fully functional admin panels with chart integrations, filtering features, theme toggles, and CRUD operations using MERN stack.",
+    },
+    {
+      name: "Backend Development",
+      imgsrc: "/backend.svg", // Optional: use a unique icon if available
+      para: "Developing secure, scalable backend services and RESTful APIs using Node.js, Express, MongoDB, and SQL databases.",
     },
   ];
+  
   return (
     <>
       <div className="min-h-screen bg-gray-950 pt-20 h-full py-10">
@@ -42,7 +48,7 @@ const Servicepage = () => {
             <h1 className="text-center w-20 bg-cyan-500 h-1 "></h1>
           </div>
         </div>
-        <div className="md:px-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-8">
+        <div className="xl:px-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-8">
           {services.map((item, idx) => (
             <div
               key={idx}

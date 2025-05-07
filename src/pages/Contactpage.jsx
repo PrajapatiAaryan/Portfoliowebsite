@@ -70,7 +70,7 @@ const Contactpage = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-start flex-col md:flex-row gap-10 px-4 md:px-52">
+      <div className="flex justify-center items-start flex-col md:flex-row gap-10 px-4 xl:px-52">
         {/* Left Section */}
         <div className="bg-gray-800 w-full md:w-[35%] rounded-md p-6 flex flex-col gap-10">
           <div className="flex items-start gap-4">
@@ -106,7 +106,7 @@ const Contactpage = () => {
           {/* Social Icons */}
           <div className="flex gap-4 mt-4">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/aryan-prajapati-7216392b2/"
               target="_blank"
               rel="noopener noreferrer"
               className="h-11 w-11 flex justify-center items-center text-white bg-gray-900 rounded-full hover:-translate-y-1 transition-all duration-300 hover:bg-cyan-300 hover:text-black"
@@ -114,7 +114,7 @@ const Contactpage = () => {
               <FaLinkedin className="text-xl" />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/PrajapatiAaryan/"
               target="_blank"
               rel="noopener noreferrer"
               className="h-11 w-11 flex justify-center items-center text-white bg-gray-900 rounded-full hover:-translate-y-1 transition-all duration-300 hover:bg-cyan-300 hover:text-black"
@@ -122,7 +122,8 @@ const Contactpage = () => {
               <FaGithub className="text-xl" />
             </a>
             <a
-              href="mailto:prajapatiaryan306@gmail.com"
+              href="mailto:prajapataryan306@gmail.com"
+              target="_blank"
               className="h-11 w-11 flex justify-center items-center text-white bg-gray-900 rounded-full hover:-translate-y-1 transition-all duration-300 hover:bg-cyan-300 hover:text-black"
             >
               <MdMail className="text-xl" />

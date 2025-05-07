@@ -35,23 +35,41 @@
 
 /* moving border */
 @keyframes movingborder {
-  0%{
+  0% {
     padding: 32px;
   }
-  25%{
-    padding: 37px;
+  10% {
+    padding: 34px;
   }
-  50%{
+  20% {
+    padding: 36px;
+  }
+  30% {
+    padding: 38px;
+  }
+  40% {
+    padding: 41px;
+  }
+  50% {
     padding: 43px;
   }
-  75%{
-    padding: 37px;
+  60% {
+    padding: 41px;
   }
-  100%{
+  70% {
+    padding: 38px;
+  }
+  80% {
+    padding: 36px;
+  }
+  90% {
+    padding: 34px;
+  }
+  100% {
     padding: 32px;
-    
   }
 }
+
 
 .animate-movingborder {
   animation: movingborder 3s ease-in-out infinite; /* Adjust the duration if necessary */
@@ -116,3 +134,8 @@ html {
 .card-gradient-hover:hover::before {
   transform: translateY(0);
 }
+
+
+
+
+/* floating dock  */
