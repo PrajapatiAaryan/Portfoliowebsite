@@ -10,6 +10,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "#home", width: "w-12" },
     { name: "About", href: "#about", width: "w-12" },
+    { name: "Education", href: "#education", width: "w-12" },
     { name: "Skill", href: "#skills", width: "w-8" },
     { name: "Service", href: "#service", width: "w-14" },
     { name: "Projects", href: "#projects", width: "w-[4.3rem]" },

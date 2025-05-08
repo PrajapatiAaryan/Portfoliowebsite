@@ -34,7 +34,7 @@ const Aboutpage = () => {
                 />
               </div>
             </div>
-            <div className="w-full xl:w-[50%] min-h-[50vh]  flex flex-col justify-center pt-20 sm:px-10 px-4 ">
+            <div className="w-full xl:w-[60%] min-h-[50vh]  flex flex-col justify-center pt-20 sm:px-10 px-4 ">
               <h1 className="xl:text-3xl text-2xl font-bold px-3 py-3">
                 Full Stack Web Developer Building Dynamic & Scalable Web
                 Solutions
@@ -62,8 +62,8 @@ const Aboutpage = () => {
                   <h1 className=" text-xl">prajapatiaryan306@gmail.com</h1>
                 </div>
               </div>
-              <div className="flex justify-between w-full  px-4  md:py-7 flex-col md:flex-row md:items-center">
-                <div className="py-2">
+              <div className="flex justify-between w-full  px-4  lg:py-7 flex-col md:flex-row md:items-center ">
+                <div className="py-2 ">
                   <h1 className="text-cyan-500 text-xl font-bold">Phone:</h1>
                   <h1 className=" text-xl">+91 9510526116</h1>
                 </div>

@@ -59,7 +59,7 @@ const Projectpage = () => {
     <div className="min-h-screen bg-gray-950 pt-20 h-full py-10">
       <div className="py-5 md:pb-12">
         <h1 className="text-center text-xl font-bold text-cyan-500">My Work</h1>
-        <h1 className="text-center text-5xl text-white font-bold py-4">
+        <h1 className="text-center text-4xl text-white font-bold py-4">
           Featured Projects
         </h1>
         <div className="flex justify-center items-center py-5">
@@ -75,7 +75,7 @@ const Projectpage = () => {
             className={`flex justify-center items-center font-semibold text-xl cursor-pointer w-fit p-3 rounded-2xl transition-all duration-500 ${
               selectedCategory === item
                 ? "bg-gradient-to-r from-cyan-500 to-blue-400 text-black transition-all duration-500"
-                : "bg-transparent border border-gray-400 text-gray-500 transition-all duration-500"
+                : "bg-transparent border border-gray-400 text-gray-500 transition-all duration-500 hover:bg-gray-900"
             }`}
           >
             {item}
